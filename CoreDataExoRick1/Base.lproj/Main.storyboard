@@ -11,10 +11,17 @@
         <!--Favorites-->
         <scene sceneID="Zko-Ti-Tfv">
             <objects>
-                <viewController id="aCe-yD-qIP" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FavoritesVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aCe-yD-qIP" customClass="FavoritesVC" customModule="CoreDataExoRick1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fRr-UB-7re">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="n6U-GR-FfQ">
+                                <rect key="frame" x="0.0" y="155" width="393" height="697"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="jTD-1B-ghx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -27,23 +34,33 @@
         <!--Characters-->
         <scene sceneID="49Q-fK-Ff0">
             <objects>
-                <viewController id="l8Y-va-o3D" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CharactersVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="l8Y-va-o3D" customClass="CharactersVC" customModule="CoreDataExoRick1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vvr-FY-TF0">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wA8-dU-iVo">
+                                <rect key="frame" x="0.0" y="155" width="393" height="697"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="lWq-cf-Fca"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Characters" id="wzb-r9-bvF"/>
+                    <connections>
+                        <outlet property="tableView" destination="wA8-dU-iVo" id="e34-og-tGs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qbW-G4-Gjq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-118.32061068702289" y="-819.0140845070423"/>
         </scene>
-        <!--View Controller-->
+        <!--DetailsVC-->
         <scene sceneID="JNl-1w-ds8">
             <objects>
-                <viewController id="4rg-za-OFQ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4rg-za-OFQ" customClass="DetailsVC" customModule="CoreDataExoRick1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KhN-II-g7Q">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
