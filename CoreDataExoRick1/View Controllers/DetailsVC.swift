@@ -20,6 +20,15 @@ class DetailsVC: UIViewController {
     @IBOutlet var listOfEpisodes: UITextView!
     
     var rickAPasser: Results?
+    
+    var isFavorite: Bool = false{
+        didSet{
+            updateButton(isFavorite: isFavorite)
+            
+            guard let rickId = rickAPasser?.id else { return }
+            UserDefaults.standard.setValue(isFavorite, forKey: "fav_\(rickId)")
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,8 +51,29 @@ class DetailsVC: UIViewController {
         if let episodes = rickAPasser?.episode{
             fetchEpisodeDetails(for: episodes)
         }
+        updateButton(isFavorite: isFavorite)
+    }
+    
+    @IBAction func pressLikeBtn(){
+        isFavorite.toggle()
+        guard let perso = charName.text else { return }
         
-
+        if !isFavorite {
+            DataManager.shared.deleteFavoriteWithName(name: perso)
+            print("removed from favorites")
+        } else {
+            DataManager.shared.addFavorite(name: perso)
+            print("added to favorites")
+        }
+        updateButton(isFavorite: isFavorite)
+    }
+    
+    func updateButton(isFavorite: Bool){
+        if isFavorite{
+            likeBtn.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+        } else {
+            likeBtn.setImage(UIImage(systemName: "heart"), for: .normal)
+        }
     }
     
     // Fonction pour récupérer les détails des épisodes à partir des URL
