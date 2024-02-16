@@ -15,6 +15,15 @@
 		42C0A5E72B72754200B6316A /* CharactersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C0A5E62B72754200B6316A /* CharactersVC.swift */; };
 		42C0A5E92B72755600B6316A /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C0A5E82B72755600B6316A /* FavoritesVC.swift */; };
 		42C0A5EB2B72756D00B6316A /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C0A5EA2B72756D00B6316A /* DetailsVC.swift */; };
+		42C0A5ED2B768C4B00B6316A /* RickMorty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C0A5EC2B768C4B00B6316A /* RickMorty.swift */; };
+		42C0A5F02B768E3A00B6316A /* CharCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C0A5EE2B768E3A00B6316A /* CharCell.swift */; };
+		42C0A5F12B768E3A00B6316A /* CharCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42C0A5EF2B768E3A00B6316A /* CharCell.xib */; };
+		42C0A5F42B768FC600B6316A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 42C0A5F32B768FC600B6316A /* Alamofire */; };
+		42C0A5F72B768FD100B6316A /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 42C0A5F62B768FD100B6316A /* AlamofireImage */; };
+		42C0A5FC2B7E228C00B6316A /* Favorite.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 42C0A5FA2B7E228C00B6316A /* Favorite.xcdatamodeld */; };
+		42C0A6002B7F56F900B6316A /* Favorite+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C0A5FE2B7F56F900B6316A /* Favorite+CoreDataClass.swift */; };
+		42C0A6012B7F56F900B6316A /* Favorite+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C0A5FF2B7F56F900B6316A /* Favorite+CoreDataProperties.swift */; };
+		42C0A6042B7F575500B6316A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C0A6032B7F575500B6316A /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +37,13 @@
 		42C0A5E62B72754200B6316A /* CharactersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersVC.swift; sourceTree = "<group>"; };
 		42C0A5E82B72755600B6316A /* FavoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
 		42C0A5EA2B72756D00B6316A /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
+		42C0A5EC2B768C4B00B6316A /* RickMorty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickMorty.swift; sourceTree = "<group>"; };
+		42C0A5EE2B768E3A00B6316A /* CharCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharCell.swift; sourceTree = "<group>"; };
+		42C0A5EF2B768E3A00B6316A /* CharCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharCell.xib; sourceTree = "<group>"; };
+		42C0A5FB2B7E228C00B6316A /* Favorite.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Favorite.xcdatamodel; sourceTree = "<group>"; };
+		42C0A5FE2B7F56F900B6316A /* Favorite+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favorite+CoreDataClass.swift"; sourceTree = "<group>"; };
+		42C0A5FF2B7F56F900B6316A /* Favorite+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favorite+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		42C0A6032B7F575500B6316A /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42C0A5F42B768FC600B6316A /* Alamofire in Frameworks */,
+				42C0A5F72B768FD100B6316A /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,17 +78,56 @@
 		42C0A5D12B71171400B6316A /* CoreDataExoRick1 */ = {
 			isa = PBXGroup;
 			children = (
+				42C0A6022B7F574400B6316A /* Service */,
+				42C0A5FD2B7E22A900B6316A /* Model */,
+				42C0A5F92B76926B00B6316A /* Network */,
+				42C0A5F82B76925A00B6316A /* View Controllers */,
 				42C0A5D22B71171400B6316A /* AppDelegate.swift */,
 				42C0A5D42B71171400B6316A /* SceneDelegate.swift */,
 				42C0A5D82B71171400B6316A /* Main.storyboard */,
-				42C0A5EA2B72756D00B6316A /* DetailsVC.swift */,
-				42C0A5E82B72755600B6316A /* FavoritesVC.swift */,
-				42C0A5E62B72754200B6316A /* CharactersVC.swift */,
+				42C0A5EE2B768E3A00B6316A /* CharCell.swift */,
+				42C0A5EF2B768E3A00B6316A /* CharCell.xib */,
 				42C0A5DB2B71171600B6316A /* Assets.xcassets */,
 				42C0A5DD2B71171600B6316A /* LaunchScreen.storyboard */,
 				42C0A5E02B71171600B6316A /* Info.plist */,
+				42C0A5EC2B768C4B00B6316A /* RickMorty.swift */,
 			);
 			path = CoreDataExoRick1;
+			sourceTree = "<group>";
+		};
+		42C0A5F82B76925A00B6316A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				42C0A5EA2B72756D00B6316A /* DetailsVC.swift */,
+				42C0A5E82B72755600B6316A /* FavoritesVC.swift */,
+				42C0A5E62B72754200B6316A /* CharactersVC.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		42C0A5F92B76926B00B6316A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		42C0A5FD2B7E22A900B6316A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				42C0A5FE2B7F56F900B6316A /* Favorite+CoreDataClass.swift */,
+				42C0A5FF2B7F56F900B6316A /* Favorite+CoreDataProperties.swift */,
+				42C0A5FA2B7E228C00B6316A /* Favorite.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		42C0A6022B7F574400B6316A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				42C0A6032B7F575500B6316A /* DataManager.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +146,10 @@
 			dependencies = (
 			);
 			name = CoreDataExoRick1;
+			packageProductDependencies = (
+				42C0A5F32B768FC600B6316A /* Alamofire */,
+				42C0A5F62B768FD100B6316A /* AlamofireImage */,
+			);
 			productName = CoreDataExoRick1;
 			productReference = 42C0A5CF2B71171400B6316A /* CoreDataExoRick1.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +178,10 @@
 				Base,
 			);
 			mainGroup = 42C0A5C62B71171400B6316A;
+			packageReferences = (
+				42C0A5F22B768FC600B6316A /* XCRemoteSwiftPackageReference "Alamofire" */,
+				42C0A5F52B768FD100B6316A /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+			);
 			productRefGroup = 42C0A5D02B71171400B6316A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -134,6 +199,7 @@
 				42C0A5DF2B71171600B6316A /* LaunchScreen.storyboard in Resources */,
 				42C0A5DC2B71171600B6316A /* Assets.xcassets in Resources */,
 				42C0A5DA2B71171400B6316A /* Main.storyboard in Resources */,
+				42C0A5F12B768E3A00B6316A /* CharCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,8 +211,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				42C0A5E92B72755600B6316A /* FavoritesVC.swift in Sources */,
+				42C0A6012B7F56F900B6316A /* Favorite+CoreDataProperties.swift in Sources */,
+				42C0A5F02B768E3A00B6316A /* CharCell.swift in Sources */,
 				42C0A5E72B72754200B6316A /* CharactersVC.swift in Sources */,
+				42C0A5ED2B768C4B00B6316A /* RickMorty.swift in Sources */,
+				42C0A6002B7F56F900B6316A /* Favorite+CoreDataClass.swift in Sources */,
 				42C0A5D32B71171400B6316A /* AppDelegate.swift in Sources */,
+				42C0A5FC2B7E228C00B6316A /* Favorite.xcdatamodeld in Sources */,
+				42C0A6042B7F575500B6316A /* DataManager.swift in Sources */,
 				42C0A5D52B71171400B6316A /* SceneDelegate.swift in Sources */,
 				42C0A5EB2B72756D00B6316A /* DetailsVC.swift in Sources */,
 			);
@@ -371,6 +443,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		42C0A5F22B768FC600B6316A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.1;
+			};
+		};
+		42C0A5F52B768FD100B6316A /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		42C0A5F32B768FC600B6316A /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 42C0A5F22B768FC600B6316A /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		42C0A5F62B768FD100B6316A /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 42C0A5F52B768FD100B6316A /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		42C0A5FA2B7E228C00B6316A /* Favorite.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				42C0A5FB2B7E228C00B6316A /* Favorite.xcdatamodel */,
+			);
+			currentVersion = 42C0A5FB2B7E228C00B6316A /* Favorite.xcdatamodel */;
+			path = Favorite.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 42C0A5C72B71171400B6316A /* Project object */;
 }
